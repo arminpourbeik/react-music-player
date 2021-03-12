@@ -45,7 +45,13 @@ export default function Player() {
           />
         </button>
         <button onClick={audioPlayHandler}>
-          <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size='2x' />
+          <FontAwesomeIcon
+            icon={isPlaying ? faPause : faPlay}
+            size='2x'
+            className={`${
+              isPlaying ? 'animate__animated animate__flipInX' : ''
+            }`}
+          />
         </button>
         <button>
           <FontAwesomeIcon

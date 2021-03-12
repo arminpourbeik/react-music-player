@@ -7,7 +7,7 @@ export default function Navbar() {
   const { setLibraryMenuOpen, libraryMenuOpen } = useContext(SongContext)
   return (
     <nav>
-      <h1>Waves Music</h1>
+      <h1 className='animate__animated animate__fadeIn'>Waves Music</h1>
       <button
         onClick={() => {
           setLibraryMenuOpen(!libraryMenuOpen)
