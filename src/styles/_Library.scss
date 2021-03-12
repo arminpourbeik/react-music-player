@@ -1,0 +1,67 @@
+.Library {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20rem;
+  box-shadow: 2px 2px 50px 5px rgba(204, 202, 202, 1);
+  h1 {
+    padding: 1rem 2rem;
+  }
+
+  overflow: auto;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  .LibraryDetail {
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 1rem;
+    }
+    h4 {
+      font-size: 0.7rem;
+    }
+    img {
+      width: 30%;
+      margin-right: 0.5rem;
+      padding: 1rem 0rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(222, 222, 255);
+    }
+  }
+}
+
+.library-menu-open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.song-active {
+  background-color: rgb(222, 222, 255);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 186, 186, 0.5);
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}

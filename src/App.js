@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// Components
+import { Navbar, Song, Player, Library } from './components'
+import { useContext } from 'react'
+import { SongContext } from './context/songs.context'
 
-function App() {
+import './styles/App.scss'
+
+export default function App() {
+  const { libraryMenuOpen } = useContext(SongContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main className={`App ${libraryMenuOpen ? 'menu-open' : ''}`}>
+      <Navbar />
+      <Song />
+      <Player />
+      <Library />
+    </main>
+  )
 }
-
-export default App;

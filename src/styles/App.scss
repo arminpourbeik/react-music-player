@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$mobile-breakpoint: 768px;
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.App {
+  transition: all 0.5s ease;
+}
+
+.menu-open {
+  margin-left: 20%;
+}
+
+@import './Navbar';
+@import './Song';
+@import './Player';
+@import './Library';
